@@ -13,7 +13,7 @@ class Block{
     }
     display(){
       //console.log(this.body.speed);
-      if(this.body.speed < 5){
+      if(this.body.speed < 3){
         var pos= this.body.position;
         rectMode(CENTER);
         rect(pos.x,pos.y,this.width, this.height);
@@ -22,7 +22,7 @@ class Block{
       {
         World.remove(world, this.body);
         push();
-        this.visiblity = this.visiblity - 50;
+        this.visiblity = this.visiblity - 5;
         tint(255,this.visiblity);
         image(this.image,this.body.position.x,this.body.position.y,30,40);
         pop();
